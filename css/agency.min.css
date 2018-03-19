@@ -61,10 +61,10 @@ section h3.section-subheading {
 }
 
 .btn {
-    font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700
-    background-color: #000000;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
 }
+
 
 .btn-xl {
     font-size: 18px;
@@ -72,21 +72,18 @@ section h3.section-subheading {
 }
 
 .btn-primary {
-    background-color:#FFFFFF;
-    border-color: #fed136;
+  background-color: #fed136;
+  border-color: #fed136;
 }
 
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover {
-    background-color: #fec810!important;
-    border-color: #fec810!important;
-    color: #fff
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  background-color: #fec810 !important;
+  border-color: #fec810 !important;
+  color: white;
 }
 
-.btn-primary:active,
-.btn-primary:focus {
-    box-shadow: 0 0 0 .2rem rgba(254, 209, 55, .5)!important
+.btn-primary:active, .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
 
 ::-moz-selection {
