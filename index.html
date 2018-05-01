@@ -1,4 +1,65 @@
 <!DOCTYPE html>
+<!-- B2: Script para menu -->
+<script>
+  var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>
+<!-- Inicio da estrutura do site -->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -33,55 +94,103 @@
 
   <body id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">InfoBio Jr.</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">InfoBio Júnior</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#portfolio">Projetos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">Quem Somos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#team">Membros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#procelSeletivo">Processo Seletivo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contato">Contato</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
 
     <!-- Header -->
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">Welcome To Our Studio!</div>
-          <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Teste</a>
+          <div class="intro-lead-in">
+          <a href="#about"> Bem-Vindo à Associação Júnior de Informática Biomédica, Infobio Jr.
+          </a>
+          </div>
+          <div class="intro-heading"><h1>
+            <p class="typewrite" data-period="2000" data-type='["Processo seletivo aberto!", "Inscrições abertas para os cursos de Excel e Photoshop!", "Criada em 2006.", "A primeira Empresa Júnior de Informática Biomédica do Brasil." ]'>
+              <span class="wrap"></span>
+            </p>
+          </h1>
+          </div>
+          <a href="#services" class="btn btn-circle js-scroll-trigger">
+                <i class="fa fa-angle-double-down animated"></i>
+          </a>
         </div>
       </div>
     </header>
 
     <!-- Servicos -->
     <section id="services">
-<!--
-    ************************************************
-    Servicos vem aqui
-
-    ***********************************************
-       -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">Serviços</h2>
+          </div>
+          <div class="row text-center">
+            <div class="col-md-4">
+              <img class="" src="img/services/criacao-de-sites1.png" alt="" height="196" width="196">
+              <h4 class="service-heading">Criação de Sites</h4>
+              <p class="text-muted">Construção de software específico para a web, com a finalidade de se obter um conjunto de programas, que satisfazem as funções pretendidas, quer em termos de usabilidade ou compatibilidade.</p>
+            </div>
+            <div class="col-md-4">
+              <img class="" src="img/services/bioinformatica.png" alt="" height="196" width="196">
+              <h4 class="service-heading">Bioinformática</h4>
+              <p class="text-muted">Modelagem e simulação de problemas biológicos que envolvem grandes volumes de dados, análise estrutural e modelos biológicos, montagem de genomas e análise de expressão gênica.</p>
+            </div>
+            <div class="col-md-4">
+              <img class="" src="img/services/cursos.png" alt="" height="196" width="196">
+              <h4 class="service-heading">Cursos</h4>
+              <p class="text-muted">Oferecimento de cursos na área de informática biomédica, sobre os mais diversos assuntos de tecnologia, desenvolvimento.</p>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-md-4">
+              <img class="" src="img/services/gestao-em-saude.png" alt="" height="196" width="196">
+              <h4 class="service-heading">Gestão em Saúde</h4>
+              <p class="text-muted"> Desenvolvimento de sistemas voltados à organização, gerenciamento e representação de dados clínicos, serviços de informação hospitalar, serviços de saúde, prontuário eletrônico do paciente e tecnologia assistiva.</p>
+            </div>
+            <div class="col-md-4">
+              <img class="" src="img/services/processamento-de-imagens.png" alt="" height="196" width="196">
+              <h4 class="service-heading">Processamento de Imagens Médicas</h4>
+              <p class="text-muted">Desenvolvimento de sistemas de apoio à decisão médica, por meio de técnicas voltadas à aquisição, otimização, tratamento e análise de sinais e imagens médicas.</p>
+            </div>
+            <div class="col-md-4">
+              <img class="" src="img/services/responsabilidade-social.png" alt="" height="196" width="196">
+              <h4 class="service-heading">Responsabilidade Social</h4>
+              <p class="text-muted">O ano de 2015 marcou o início da modalidade de projetos sociais na InfoBio Jr. Visamos ampliar o campo de atuação da empresa, contribuindo para o aprimoramento da relação existente entre a comunidade universitária e a sociedade como um todo. </p>
+            </div>
+          </div>
+        </div>
     </section>
 
     <!-- Projetos aqui -->
