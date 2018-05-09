@@ -150,7 +150,7 @@
     </header>
 
     <!-- Servicos -->
-    <section id="services">
+    <section class="py-5" id="services">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -194,17 +194,63 @@
     </section>
 
     <!-- Projetos aqui -->
-    <section class="bg-light" id="portfolio">
-<!--
+	<section class="py-5 bg-light" id="portfolio">
+      <div class="container">
+	  
+        <div class="row"> <!-- Cabeçalho da seção de projetos -->
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase"> Projetos </h2>
+            <h3 class="section-subheading text-muted"> Aqui estão os projetos mais recentes que realizamos! </h3>
+          </div>
+        </div>
+		
+        <div class="row"> <!-- Linha que contém os projetos -->
+		
+		<!-- Informações de um projeto (1° coluna da linha) -->
+          <div class="col-md-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/ProjetoC.png" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Website do 15° Congresso Paulista de Saúde Pública</h4>
+              <p class="text-muted"> Este website foi desenvolvido para que fosse possível realizar a divulgação do congresso e para gerenciar atividades de submissão de trabalhos para o congresso.</p>
+            </div>
+          </div>
+		  
+          <div class="col-md-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/CursoExcel1-20181.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Curso de Excel</h4>
+              <p class="text-muted"> O curso de "Excel: do básico ao avançado" foi oferecido em parceria com a "Passa Eu" no 1° semestre de 2018. </p>
+            </div>
+          </div>
+          
+        </div> <!-- Fim da linha que contém os projetos -->
+      </div> <!-- Fim container -->
+    </section>
+	
+	
+    <!--
     ************************************************
     Projetos vem aqui
 
     ***********************************************
        -->
-    </section>
 
     <!-- Quem somos -->
-    <section id="about">
+    <section class="py-5" id="about">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -246,7 +292,7 @@
     </section>
 
     <!-- Membros -->
-    <section class="bg-light" id="team">
+    <section class="py-5 bg-light" id="team">
         <div class="container">
                 <div class="row">
                   <div class="col-lg-12 text-center">
@@ -844,7 +890,7 @@
     </section>
 
     <!-- LOCALIZACAO E CONTATO -->
-    <section id="contato">
+    <section class="py-5" id="contato">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -867,32 +913,32 @@
 
                   <!-- TODO/ANOTACAO/ARRUMAR: colocar os textos do lado do icone -->
                   <div class="single contact-info">
-                    <ul class="list-unstyled">
-                      <li>
-                        <div class="icon"><i class="fa fa-map-marker"></i></div>
-                        <div class="info"><p>Avenida Bandeirantes, Nº3900, Bairro Vila Monte Alegre </br>– Ribeirão Preto - SP, CEP: 14049-900</p></div>
-                      </li>
-
-                      <li>
-                        <div class="icon"><i class="fa fa-phone"></i></div>
-                        <div class="info"><p>(16) 99375-3695</p></div>
-                      </li>
-
-                      <li>
-                        <div class="icon"><i class="fa fa-envelope"></i></div>
-                        <div class="info"><p>contato@infobiojr.com.br</p></div>
-                      </li>
-
-                      <li>
-                        <div class="icon">
-                          <a href="https://www.facebook.com/InfoBioJr/">
-                            <i class="fa fa-facebook"></i>
-                          </a>
-                        </div>
-                        <div class="info"><p>www.facebook.com/InfoBioJr/</p></div>
-                      </li>
-
-                    </ul>
+					<br>
+					<div class="container">
+						<div class="row">
+							<p>
+								<div class="icon"><i class="fa fa-map-marker"></i></div>&nbsp; &nbsp;
+								<div class="info">Avenida Bandeirantes, Nº3900 </div>
+								<div class="info">Vila Monte Alegre– Ribeirão Preto(SP)</div>
+								<div class="info">CEP: 14049-900</div>
+							</p>
+						</div>
+						<br>
+						<div class="row">
+							<div class="icon"><i class="fa fa-phone"></i></div> &nbsp; &nbsp;
+							<div class="info"><p> (16) 99375-3695</p></div>
+						</div>
+						
+						<div class="row">
+							<div class="icon"><i class="fa fa-envelope"></i></div> &nbsp; &nbsp;
+							<div class="info"><p>contato@infobiojr.com.br</p></div>
+						</div>
+						
+						<div class="row">
+							<div class="icon"> <i class="fa fa-facebook"></i> </div> &nbsp; &nbsp;
+							<div class="info"> <p> <a href="https://www.facebook.com/InfoBioJr/">www.facebook.com/InfoBioJr/</a> </p> </div>
+						</div>
+					</div>
                   </div>
                 </div>
 
