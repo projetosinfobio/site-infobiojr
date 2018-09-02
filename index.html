@@ -43,7 +43,7 @@
         }, delta);
     };
 
-    window.onload = function() {
+    function textos() {
         var elements = document.getElementsByClassName('typewrite');
         for (var i=0; i<elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-type');
@@ -69,21 +69,19 @@
 
     <!-- Icone da aba do site -->
     <link rel="shortcut icon" href="img\LogoInfobioJr.png" type="image/png">
-	<link rel="icon" href="img\LogoInfobioJr.png" type="image/png">
+    <link rel="icon" href="img\LogoInfobioJr.png" type="image/png">
 
-    <title>INFOBIO jr</title>
+    <title>InfoBio Jr.</title>
 
-    <!-- SlideShow (parte de membros) -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<style>
-		.mySlides {display:none}
-		.w3-left, .w3-right, .w3-badge {cursor:pointer}
-		.w3-badge {height:20px;width:20px;padding:0}
-	</style>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+  	<!-- Styles for carrousel --> 
+    <link rel="stylesheet" href="css/carousel-bootstrap.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -97,7 +95,7 @@
   </head>
 
   <!-- Assim que a página for carregada, todas informações de cada membros serão colocados -->
-  <body id="page-top" onload="infoMembros();">
+  <body id="page-top" onload="textos(); infoMembros();">
 
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -428,22 +426,47 @@
     }
 
   </script>
-  <section class="py-4 bg-light" id="team">
-  	<div class="container">
-  		<div class="row">
-  			<div class="col-lg-12 text-center">
-  				<h2 class="section-heading text-uppercase">Membros</h2>
-  			</div>
-  		</div>
+  
+  	
 
-  		<!-- Sessão1: primeira "página de membros" -->
-  		<div class="w3-content" style="max-width:800px"> <!-- Container do slideshow -->
-  			<div class="mySlides">
-  				<div class="section-members">
+  <!-- MEMBROS -->
+	<div id="myCarousel" class="carousel slide" data-interval="5000" data-ride="carousel">
+    <section class="py-4 bg-light" id="team">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Membros</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="large text-muted">
+              <h4>
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModalMembers">
+                Clique aqui para ver todos os membros. </a>
+              </h4>
+              <br>
+            </p>
+          </div>
+        </div> 
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active"> <!-- Sessão1: primeira "página de membros" -->
+
   					<div class="row">
   						<div class="col-sm-4">
   							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro1"  src="img/team/member.jpg" alt="">
+  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro1"  src="img/team/member.jpg" alt="" >
   								<h4> <div id="nome_membro1"> <!-- NOME DO MEMBRO 1 --> </div> </h4>
   								<p> <div id="cargo_membro1"> <!-- CARGO DO MEMBRO 1 --> </div> </p>
   								<ul class="list-inline social-buttons">
@@ -513,13 +536,11 @@
   								</ul>
   							</div>
   						</div>
-  					</div>
-  				</div>
-  			</div> <!-- fim 1° myslides fade -->
+            </div>
+    			</div> <!-- fim 1° myslides fade -->
 
-  			<!-- Sessão2: segunda "página de membros" -->
-  			<div class="mySlides">
-  				<div class="section-members">
+    			<!-- Sessão2: segunda "página de membros" -->
+    			<div class="item">
   					<div class="row">
   						<div class="col-sm-4">
   							<div class="team-member">
@@ -593,13 +614,11 @@
   								</ul>
   							</div>
   						</div>
-  					</div>
-  				</div>
-  			</div> <!-- fim 2° myslides -->
+    				</div>
+    			</div> <!-- fim 2° myslides -->
 
-  			<!-- Sessão3: terceira "página de membros" -->
-  			<div class="mySlides">
-  				<div class="section-members">
+    			<!-- Sessão3: terceira "página de membros" -->
+    			<div class="item ">
   					<div class="row">
   						<div class="col-sm-4">
   							<div class="team-member">
@@ -674,357 +693,71 @@
   							</div>
   						</div>
   					</div>
-  				</div>
-  			</div> <!-- fim 3° myslides -->
+          </div> <!-- fim 3° myslides -->
+        </div> <!-- Fim carrousel inner -->
 
-  			<!-- Sessão4: quarta "página de membros" -->
-  			<div class="mySlides">
-  				<div class="section-members">
-  					<div class="row">
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro10" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro10"> <!-- NOME DO MEMBRO 10 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro10"> <!-- CARGO DO MEMBRO 10 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro10" href="#">
-  											<i class="fa fa-twitter"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro10" href="#" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro10" href="#">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro11" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro11"> <!-- NOME DO MEMBRO 11 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro11"> <!-- CARGO DO MEMBRO 11 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro11" href="#">
-  											<i class="fa fa-twitter"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro11" href="#" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro11" href="#">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro12" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro12"> <!-- NOME DO MEMBRO 12 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro12"> <!-- CARGO DO MEMBRO 12 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro12" href="#">
-  											<i class="fa fa-twitter"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro12" href="#" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro12" href="#">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  					</div>
-  				</div>
-  			</div> <!-- fim 4° myslides -->
-
-  			<!-- Sessão5: quinta "página de membros" -->
-  			<div class="mySlides">
-  				<div class="section-members">
-  					<div class="row">
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro13" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro13"> <!-- NOME DO MEMBRO 13 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro13"> <!-- CARGO DO MEMBRO 13 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro13" href="#">
-  											<i class="fa fa-twitter"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro13" href="#" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro13" href="#">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro14" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro14"> <!-- NOME DO MEMBRO 14 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro14"> <!-- CARGO DO MEMBRO 14 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro14" href="#">
-  											<i class="fa fa-twitter"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro14" href="#" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro14" href="#">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro15" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro15"> <!-- NOME DO MEMBRO 15 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro15"> <!-- CARGO DO MEMBRO 15 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro15" href="#">
-  											<i class="fa fa-twitter"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro15" href="#" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro15" href="#">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  					</div>
-  				</div>
-  			</div> <!-- fim 5° myslides -->
-
-  			<!-- Sessão6: sexta "página de membros" -->
-  			<div class="mySlides">
-  				<div class="section-members">
-  					<div class="row">
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro16" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro16"> <!-- NOME DO MEMBRO 16 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro16"> <!-- CARGO DO MEMBRO 16 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro16" href="#">
-  											<i class="fa fa-twitter"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro16" href="#" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro16" href="#">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro17" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro17"> <!-- NOME DO MEMBRO 17 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro17"> <!-- CARGO DO MEMBRO 17 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro17" href="#">
-  											<i class="fa fa-twitter"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro17" href="#" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro17" href="#">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro18" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro18"> <!-- NOME DO MEMBRO 18 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro18"> <!-- CARGO DO MEMBRO 18 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro18" href="#">
-  											<i class="fa fa-twitter"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro18" href="#" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro18" href="#">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  					</div>
-  				</div>
-  			</div> <!-- fim 6° myslides -->
-
-			<div class="w3-center w3-container w3-section w3-large w3-text-black w3-display-middle" style="width:80%; position: relative;">
-				<!-- Botões p/ avançar ou voltar. -->
-				<div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">
-					<b class="w3-transparent " style="font-size: 50px; padding: 10px;"> &#10094; </b>
-				</div>
-				<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">
-					<b class="w3-transparent " style="font-size: 50px; padding: 10px;"> &#10095; </b>
-				</div>
-			</div>
-		</div> <!-- fim content slideshow -->
-
-		<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display">
-			<!-- Botões p/ acessar qualquer slide do slideshow -->
-			<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(1)"></span>
-			<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(2)"></span>
-			<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-			<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(4)"></span>
-			<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(5)"></span>
-			<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="currentDiv(6)"></span>
-		</div>
-
-
-		<script>
-			var slideIndex = 0;
-			showDivs(slideIndex);
-
-			carousel();
-
-			function carousel() {
-				var i;
-				var x = document.getElementsByClassName("mySlides");
-				var dots = document.getElementsByClassName("demo");
-
-				for (i = 0; i < x.length; i++) {
-					x[i].style.display = "none";
-				}
-
-				for (i = 0; i < dots.length; i++) {
-					dots[i].className = dots[i].className.replace(" w3-black", "");
-				}
-
-				slideIndex++;
-
-				if (slideIndex > x.length) 
-				{slideIndex = 1}
-				
-				x[slideIndex-1].style.display = "block";
-				dots[slideIndex-1].className += " w3-black";
-
-  			//Colocando efeito de transicao ao mudar o slide.
-  			x[slideIndex-1].className += " w3-animate-opacity";
-  			setTimeout(carousel, 9000);
-      }
-
-  		function plusDivs(n) {
-  			showDivs(slideIndex += n);
-  		}
-
-  		function currentDiv(n) {
-  			showDivs(slideIndex = n);
-  		}
-
-  		function showDivs(n) {
-  			var i;
-  			var x = document.getElementsByClassName("mySlides");
-  			var dots = document.getElementsByClassName("demo");
-
-  			  //Verifica se é para ir para o primeiro slide.
-  			  if (n > x.length) {slideIndex = 1}
-
-  			  //Verifica se é para ir para o último slide.
-  			if (n < 1) {slideIndex = x.length}
-
-  			  //Deixando todos os slides invisíveis. Assim, irá aparecer apenas o qual queremos.
-  			for (i = 0; i < x.length; i++) {
-  				x[i].style.display = "none";
-  			}
-  			for (i = 0; i < dots.length; i++) {
-  				dots[i].className = dots[i].className.replace(" w3-black", "");
-  			}
-  			  x[slideIndex-1].style.display = "block"; //Deixa visível apenas o slide atual(que está sendo exibido).
-  			  dots[slideIndex-1].className += " w3-black";
-
-  			  //Colocando efeito de transicao ao mudar o slide.
-  			  x[slideIndex-1].className += " w3-animate-opacity";
-  			}
-  		</script>
-
-  		<div class="row">
-  			<div class="col-lg-8 mx-auto text-center">
-  				<p class="large text-muted">
-  					<h4>
-  						<a class="portfolio-link" data-toggle="modal" href="#portfolioModalMembers">
-  						Clique aqui para ver todos os membros. </a>
-  					</h4>
-  				</p>
-  			</div>
-  		</div>
-  	</div> <!-- fim container slideshow-->
-  </section>
-
-    <!-- ProcessoSeletivo -->
-    <section class="py-4" id="procelSeletivo">
-		<center><h2 class="section-heading text-uppercase">Processo Seletivo</h2></center>
-			<br>
-			<center> <h3> Em construção...  </h1> </center>
-		<center> <img src=http://construtoradr.com.br/images/portfolio/construcao.png /> </center>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div> <!-- Fim do container -->
+    
     </section>
+  </div> <!-- Fim do carrousel-->
+
+
+  <!-- PROCESSO SELETIVO -->
+  <section class="py-4" id="procelSeletivo">
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase"> Processo Seletivo </h2>
+        <br>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <!-- 1° column -->
+        <div class="col" >
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/Mario_Adolfi.png" alt="Mario Adolfi - Co-Fundador da empresa Kidopi">
+            <h4> Mário Sergio Adolfi </h4>
+            <p> Depoimento do Co-Fundador e Diretor Executivo da Kidopi </p>
+            <p class="text-muted"> Tive a gratificante oportunidade de, durante 3 anos de minha vida acadêmica, ser membro da InfoBio Jr. Ao exercer os cargos de Estagiário, Diretor de Projetos e Presidente tive grande desenvolvimento de meu lado empreendedor, recomendo a todos que aproveitem esta oportunidade e que façam parte da InfoBio. Esta experiência foi de grande importância para minha formação! </p>
+          </div>
+        </div>
+
+        <!-- 2° column -->
+        <div class="col">
+            <h4 class="text-center"> Gostou da Infobio Jr.?? </h4>
+              <p class="text-muted" >  
+                <p class="text-muted">
+                  Gostaria de colocar em prática o que aprendeu em aula? Venha participar dessa empresa Júniornior maravilhosa de Ribeirão Preto!
+                </p>
+                
+                <p class="text-muted">
+                  Se você é de um curso que não seja o da Informática Biomédica mas quer participar, essa é a sua chance!! Vamos te receber como recebemos nossos IBmers!! Com o maior prazer!
+                </p>
+                <p class="text-muted">
+                  Aguarde o novo processo seletivo e entre para o time de estagiários da InfoBio Jr! Em caso de dúvidas, procure um de nossos diretores.
+                  O processo seletivo sempre abre no começo de cada semestre, fica esperto para não perder as inscrições.
+                </p>
+            </p>
+            <p align="center">
+              <button class="btn btn-primary btn-xl text-uppercase"> Inscreva-se já! </button>
+            </p>
+            
+        </div>
+      </div>  <!-- End row -->
+    </div>
+  </section>
 
     <!-- LOCALIZACAO E CONTATO -->
     <section class="py-4" id="contato">
