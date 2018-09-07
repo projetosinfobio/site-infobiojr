@@ -22,5 +22,12 @@ O template usado como base para o desenvolvimento foi o [Agency](https://startbo
 
 #### Parte de Contato:
 
+#### Padrão do Código
 
+O código esta na seguinte ordem:
+1. PHP
+2. HTML
+3. JavaScript
+
+O aquivo inicial é o index.php, que realiza a chamada para os outros arquivos, que estão na pasta sistema, com exceção do Header.
 
