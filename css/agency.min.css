@@ -15,13 +15,7 @@ p {
 }
 
 a {
-    /*cor da primeira frase*/
-    color: #78FFAC
-}
-
-a:hover {
-    /*cor de seleção da primeira frase*/
-    color: #B0C67D
+    color: #35507F
 }
 
 .text-primary {
@@ -221,6 +215,7 @@ header.masthead .intro-text .intro-lead-in {
     line-height: 22px;
     margin-bottom: 25px;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    color: #35507F;
 }
 
 header.masthead .intro-text .intro-heading {
@@ -281,6 +276,7 @@ header.masthead .intro-text .intro-heading {
     transition: all ease .5s;
     opacity: 0;
     background: rgba(176,198,125, .9)
+    color: #35507F;
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
