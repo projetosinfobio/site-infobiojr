@@ -7,7 +7,7 @@
 body {
     /*fonte dos textos*/
     overflow-x: hidden;
-    font-family: Aaux ProMedium OSF, 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-family: Bahnschrift Light, Aaux ProMedium OSF, 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif
 }
 
 p {
@@ -50,7 +50,6 @@ section h2.section-heading {
 section h3.section-subheading {
     font-size: 16px;
     font-weight: 400;
-    font-style: italic;
     margin-bottom: 20px;
     text-transform: none;
     /*muda frase que está em Projetos*/
@@ -254,6 +253,10 @@ header.masthead .intro-text .intro-heading {
     text-transform: none
 }
 
+.text-muted {
+    text-align: justify;
+}
+
 #portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px
@@ -318,7 +321,6 @@ header.masthead .intro-text .intro-heading {
 
 #portfolio .portfolio-item .portfolio-caption p {
     font-size: 16px;
-    font-style: italic;
     margin: 0;
     /*fonte de textos em Projetos*/
     font-family: Bahnschrift Light, 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif
