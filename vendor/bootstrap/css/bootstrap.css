@@ -8124,6 +8124,7 @@ a.text-success:focus, a.text-success:hover {
 
 a.text-info:focus, a.text-info:hover {
   color: #117a8b !important;
+  cursor: pointer;
 }
 
 .text-warning {
