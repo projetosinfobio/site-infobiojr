@@ -287,6 +287,8 @@
     </section>
 
   <!-- Membros -->
+  
+  <!-- Passos para alterar membros, importante atualizar a cada processo seletivo-->
   <script> 
   // Script para a automatização na inserção, alteração, consulta e remoção de membros.
   var nlinhas = 27; // Quando inserir ou remover membro, tem que atualizar esse número.
@@ -482,7 +484,8 @@
           </div>
         </div>
 
-        <!-- Indicators -->
+        <!-- Indicators, bolinhas embaixo das fotos, sempre que for necessário aumentar/diminuir
+		a quantidade de sessões precisa alterar aqui, atentando para não repetir o índice-->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -499,8 +502,8 @@
         <div class="carousel-inner">
           <div class="item active"> <!-- Sessão1: primeira "página de membros" -->
 
-  					<div class="row">
-  						<div class="col-sm-4">
+  					<div class="row"> <!-- primeiro bloco de membros, sessão = 3 pessoas-->
+  						<div class="col-sm-4"> <!-- cada tag dessa abriga os dados de um membro-->
   							<div class="team-member">
   								<img class="mx-auto rounded-circle" id="endereco_imagem_membro1"  src="img/team/member.jpg" alt="" >
   								<h4> <div id="nome_membro1"> <!-- NOME DO MEMBRO 1 --> </div> </h4>
