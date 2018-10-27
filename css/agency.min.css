@@ -234,11 +234,11 @@ header.masthead .intro-text .intro-heading {
     header.masthead .intro-text .intro-lead-in {
         font-size: 60px;
         font-style: italic;
-        color: #35507F;
+        color: rgb(255, 255, 255));
         line-height: 40px;
         margin-bottom: 25px;
-        text-shadow: 2px 2px #123520;
-        font-family: Candara, Century Gothic, 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif
+        text-shadow: 1.5px 1.5px rgb(20, 31, 49);
+        font-family: Arial, Helvetica, sans-serif, Century Gothic, 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif
     }
     header.masthead .intro-text .intro-heading {
         font-size: 75px;
