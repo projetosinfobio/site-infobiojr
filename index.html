@@ -287,6 +287,8 @@
     </section>
 
   <!-- Membros -->
+  
+  <!-- Passos para alterar membros, importante atualizar a cada processo seletivo-->
   <script> 
   // Script para a automatização na inserção, alteração, consulta e remoção de membros.
   var nlinhas = 27; // Quando inserir ou remover membro, tem que atualizar esse número.
@@ -363,7 +365,7 @@
 
     // 13° Membro
     membros[12][0] = "Thais Jesus"; membros[12][1] = "Conselheira";
-    membros[12][2] = "#"; membros[12][3] = "https://www.facebook.com/thaishelena.jesus"; membros[12][4] = "www.linkedin.com/in/thais-helena-jesus";
+    membros[12][2] = "https://github.com/thaishelenaa"; membros[12][3] = "https://www.facebook.com/thaishelena.jesus"; membros[12][4] = "https://www.linkedin.com/in/thais-helena-jesus";
     membros[12][5] = "img/team/thais_jesus.jpg";
 
     // 14° Membro
@@ -428,7 +430,7 @@
 
     // 26° Membro
     membros[25][0] = "Alessandra Santos"; membros[25][1] = "RH";
-    membros[25][2] = ""; membros[25][3] = ""; membros[25][4] = "";
+    membros[25][2] = "#"; membros[25][3] = "#"; membros[25][4] = "#";
     membros[25][5] = "img/team/alessandra_santos.jpg";
 
     // 27° Membro
@@ -438,12 +440,9 @@
 
 	
     /* X° Membro
-    membros[18][0] = "nome";
-    membros[18][1] = "cargo";
-    membros[18][2] = "#github";
-    membros[18][3] = "#facebook";
-    membros[18][4] = "#linkedin";
-    membros[18][5] = "img/team/nathan_zanuto.jpg"; // Endereco da imagem.  */
+    membros[18][0] = "nome"; membros[18][1] = "cargo";
+    membros[18][2] = "#github";  membros[18][3] = "#facebook";  membros[18][4] = "#linkedin";
+    membros[18][5] = "img/team/nome_sobrenome.jpg"; // Endereco da imagem.  */
 
     function infoMembros(){
         var i;
@@ -485,7 +484,8 @@
           </div>
         </div>
 
-        <!-- Indicators -->
+        <!-- Indicators, bolinhas embaixo das fotos, sempre que for necessário aumentar/diminuir
+		a quantidade de sessões precisa alterar aqui, atentando para não repetir o índice-->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -502,8 +502,8 @@
         <div class="carousel-inner">
           <div class="item active"> <!-- Sessão1: primeira "página de membros" -->
 
-  					<div class="row">
-  						<div class="col-sm-4">
+  					<div class="row"> <!-- primeiro bloco de membros, sessão = 3 pessoas-->
+  						<div class="col-sm-4"> <!-- cada tag dessa abriga os dados de um membro-->
   							<div class="team-member">
   								<img class="mx-auto rounded-circle" id="endereco_imagem_membro1"  src="img/team/member.jpg" alt="" >
   								<h4> <div id="nome_membro1"> <!-- NOME DO MEMBRO 1 --> </div> </h4>
