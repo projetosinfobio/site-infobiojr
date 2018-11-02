@@ -326,6 +326,8 @@ header.masthead .intro-text .intro-heading {
 #portfolio .portfolio-item .portfolio-caption p {
     font-size: 16px;
     margin: 0;
+    text-align: justify; 
+    
     /*fonte de textos em Projetos*/
     font-family: Bahnschrift Light, 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif
 }

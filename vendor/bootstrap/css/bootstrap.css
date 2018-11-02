@@ -450,7 +450,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 h5, .h5 {
@@ -8160,7 +8160,7 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .text-muted {
-  color: #868e96 !important;
+  color: #000000 !important;
 }
 
 .text-hide {
