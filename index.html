@@ -92,15 +92,18 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126758222-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130731311-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
       gtag('config', 'UA-126758222-1');
     </script>
+	  gtag('config', 'UA-130731311-1');
+	</script>
 
   </head>
 
@@ -146,7 +149,7 @@
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">
-          	<a href="#about"> Bem-Vindo à Infobio Jr! </a>
+          	Bem-Vindo à Infobio Jr!
           </div>
           <div class="intro-heading"><h1>
             <!-- <p class="typewrite" data-period="2000" data-type='["Fundada em 2006", "Mais de 50 projetos realizados", "Pioneira da área no Brasil", "Processo seletivo semestral", "Contou com mais de 100 membros"]'> -->
@@ -156,6 +159,7 @@
           </h1>
           </div>
           <a href="#services" class="btn btn-circle js-scroll-trigger">
+          <a href="#services" class="btn btn-circle js-scroll-trigger btn-down">
                 <i class="fa fa-angle-double-down animated"></i>
           </a>
         </div>
@@ -212,8 +216,6 @@
 	  
         <div class="row"> <!-- Cabeçalho da seção de projetos -->
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase"> Projetos </h2>
-            <h3 class="section-subheading text-muted"> Aqui estão os projetos mais recentes que realizamos! </h3>
           </div>
         </div>
 		
@@ -222,11 +224,6 @@
 		<!-- Informações de um projeto (1° coluna da linha) -->
           <div class="col-md-6 portfolio-item">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
               <img class="img-fluid" src="img/portfolio/ProjetoC.png" alt="">
             </a>
             <div class="portfolio-caption">
@@ -237,11 +234,6 @@
 		  
           <div class="col-md-6 portfolio-item">
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
               <img class="img-fluid" src="img/portfolio/CursoExcel1-20181.jpg" alt="">
             </a>
             <div class="portfolio-caption">
@@ -297,9 +289,16 @@
     </section>
 
   <!-- Membros -->
+  
+  <!-- Passos para alterar membros, importante atualizar a cada processo seletivo
+  1- mudar o valor da variável nlinhas, para aumentar/diminuir o tamanho da matriz que guarda os membros
+  2- inserir/apagar os dados dos membros na matriz
+  3- acrescentar/retirar a bolinha de baixo das fotos
+  4- acrescentar/retirar porção do html, com divs e lembrar de mudar os nomes de IDs!!
+  -->
   <script> 
   // Script para a automatização na inserção, alteração, consulta e remoção de membros.
-  var nlinhas = 27; // Quando inserir ou remover membro, tem que atualizar esse número.
+  var nlinhas = 14; // Quando inserir ou remover membro, tem que atualizar esse número.
   var ncolunas = 6;
 
   // Declarando uma matriz.
@@ -312,148 +311,79 @@
     // 3° Linha: endereço da imagem
 
     // 1° Membro
-    membros[0][0] = "Anderson Apunike"; membros[0][1] = "Conselheiro"; 
+    membros[0][0] = "Anderson Apunike"; membros[0][1] = "Presidente"; 
     membros[0][2] = "https://github.com/acapunike/"; membros[0][3] = "https://www.facebook.com/anderson.chidi.144"; membros[0][4] = "https://www.linkedin.com/in/anderson-chidi/";
     membros[0][5] = "img/team/anderson_apunike.jpg"; // Endereco da imagem.
 
    // 2° Membro
-    membros[1][0] = "Bianca Carvalho"; membros[1][1] = "Conselheira";
+    membros[1][0] = "Bianca Carvalho"; membros[1][1] = "Diretora Financeiro";
     membros[1][2] = "https://github.com/biaanaomi"; membros[1][3] = "https://www.facebook.com/bianca.naomi.1"; membros[1][4] = "https://www.linkedin.com/in/bianca-naomi-62525a144/";
     membros[1][5] = "img/team/bianca_carvalho.jpg"; 
   
     // 3° Membro
-    membros[2][0] = "Camila Gaio"; membros[2][1] = "Marketing";
+    membros[2][0] = "Camila Gaio"; membros[2][1] = "Diretora Marketing";
     membros[2][2] = "https://github.com/camilagaio"; membros[2][3] = "https://www.facebook.com/camila.gaio.5"; membros[2][4] = "https://www.linkedin.com/in/camila-gaio/";
-    membros[2][5] = "img/team/camila_gaio.jpg"; 
- 
-    // 4° Membro
-    membros[3][0] = "Douglas Feltrim"; membros[3][1] = "Diretor Marketing";
-    membros[3][2] = "https://github.com/dougfeltrim"; membros[3][3] = "https://www.facebook.com/dougfeltrim"; membros[3][4] = "https://www.linkedin.com/in/douglas-feltrim-838673a9";
-    membros[3][5] = "img/team/douglas_feltrim.jpg"; 
- 
+    membros[2][5] = "img/team/camila_gaio.jpg";  
+
+      // 4° Membro
+    membros[3][0] = "Karen Kanashiro"; membros[3][1] = "Financeiro";
+    membros[3][2] = "https://github.com/karenkanashiro"; membros[3][3] = "https://www.facebook.com/karen.kanashiro.07"; membros[3][4] = "https://www.linkedin.com/in/karen-kanashiro-13929915b";
+    membros[3][5] = "img/team/karen_kanashiro.jpg";
+
     // 5° Membro
-    membros[4][0] = "Gabriel Rubio"; membros[4][1] = "Diretor Qualidade";
-    membros[4][2] = "https://github.com/GabrielRubio/"; membros[4][3] = "https://www.facebook.com/gabriel.rubio.758"; membros[4][4] = "https://www.linkedin.com/in/gabriel-miranda-rubio/";
-    membros[4][5] = "img/team/gabriel_rubio.jpg"; 
+    membros[4][0] = "Larissa Asito"; membros[4][1] = "Diretora Qualidade";
+    membros[4][2] = "https://github.com/LarissaAsito"; membros[4][3] = "https://www.facebook.com/larissa.asito"; membros[4][4] = "https://www.linkedin.com/in/larissa-asito-b89b0915b/";
+    membros[4][5] = "img/team/larissa_asito.jpg";
 
-   // 6° Membro
-    membros[5][0] = "Guilherme Castro"; membros[5][1] = "Projetos";
-    membros[5][2] = "https://github.com/guimuniz"; membros[5][3] = "https://www.facebook.com/GuiMunizzZ"; membros[5][4] = "https://www.linkedin.com/in/guimunizzz/";
-    membros[5][5] = "img/team/guilherme_castro.jpg";
+    // 6° Membro
+    membros[5][0] = "Nathan Zanuto"; membros[5][1] = "Diretor Recursos Humanos";
+    membros[5][2] = "https://github.com/ntzanuto1610?tab=stars"; membros[5][3] = "https://www.facebook.com/cnj.lzz"; membros[5][4] = "https://www.linkedin.com/in/nathan-terra-zanuto-708429163/";
+    membros[5][5] = "img/team/nathan_zanuto.jpg"; 
 
-    // 7° Membro
-    membros[6][0] = "Karen Kanashiro"; membros[6][1] = "Diretora Financeiro";
-    membros[6][2] = "https://github.com/karenkanashiro"; membros[6][3] = "https://www.facebook.com/karen.kanashiro.07"; membros[6][4] = "https://www.linkedin.com/in/karen-kanashiro-13929915b";
-    membros[6][5] = "img/team/karen_kanashiro.jpg";
+ 	// 7° Membro
+    membros[6][0] = "Natielle Sá"; membros[6][1] = "Projetos";
+    membros[6][2] = "https://github.com/NatielleGoncalves"; membros[6][3] = "https://www.facebook.com/natielle.gonsalves"; membros[6][4] = "https://www.linkedin.com/in/natielle-gon%C3%A7alves-de-s%C3%A1-0584a7162/";
+    membros[6][5] = "img/team/natielle_sa.jpg";
 
     // 8° Membro
-    membros[7][0] = "Larissa Asito"; membros[7][1] = "Qualidade";
-    membros[7][2] = "https://github.com/LarissaAsito"; membros[7][3] = "https://www.facebook.com/larissa.asito"; membros[7][4] = "https://www.linkedin.com/in/larissa-asito-b89b0915b/";
-    membros[7][5] = "img/team/larissa_asito.jpg";
+    membros[7][0] = "Ninna Silva"; membros[7][1] = "Diretora Projetos";
+    membros[7][2] = "https://github.com/NinnaHS"; membros[7][3] = "https://www.facebook.com/ninna.hiratasilva"; membros[7][4] = "https://www.linkedin.com/in/ninna-hirata-silva-41353915b/";
+    membros[7][5] = "img/team/ninna_silva.jpg";
 
     // 9° Membro
-    membros[8][0] = "Nathan Zanuto"; membros[8][1] = "Recursos Humanos";
-    membros[8][2] = "https://github.com/ntzanuto1610?tab=stars"; membros[8][3] = "https://www.facebook.com/cnj.lzz"; membros[8][4] = "https://www.linkedin.com/in/nathan-terra-zanuto-708429163/";
-    membros[8][5] = "img/team/nathan_zanuto.jpg"; 
+    membros[8][0] = "Larissa Okano"; membros[8][1] = "Recursos Humanos";
+    membros[8][2] = "#"; membros[8][3] = "https://www.facebook.com/larissa.okano"; membros[8][4] = "https://www.linkedin.com/in/larissa-miyuki-okano-8b867a16a/";
+    membros[8][5] = "img/team/larissa_okano.jpg";
 
- 	// 10° Membro
-    membros[9][0] = "Natielle Sá"; membros[9][1] = "Diretora Projetos";
-    membros[9][2] = "https://github.com/NatielleGoncalves"; membros[9][3] = "https://www.facebook.com/natielle.gonsalves"; membros[9][4] = "https://www.linkedin.com/in/natielle-gon%C3%A7alves-de-s%C3%A1-0584a7162/";
-    membros[9][5] = "img/team/natielle_sa.jpg";
+    // 10° Membro
+    membros[9][0] = "Beatriz Miranda"; membros[9][1] = "Projetos";
+    membros[9][2] = "https://github.com/BeaMtrix"; membros[9][3] = "https://www.facebook.com/beatriz.miranda.7771"; membros[9][4] = "https://www.linkedin.com/in/beatriz-miranda-b81345165/";
+    membros[9][5] = "img/team/beatriz_miranda.jpg";
 
-    // 11° Membro
-    membros[10][0] = "Ninna Silva"; membros[10][1] = "Projetos";
-    membros[10][2] = "https://github.com/NinnaHS"; membros[10][3] = "https://www.facebook.com/ninna.hiratasilva"; membros[10][4] = "https://www.linkedin.com/in/ninna-hirata-silva-41353915b/";
-    membros[10][5] = "img/team/ninna_silva.jpg";
-   
+	// 11° Membro
+    membros[10][0] = "Julia Prado"; membros[10][1] = "Marketing";
+    membros[10][2] = "https://github.com/juupr4do"; membros[10][3] = "https://www.facebook.com/profile.php?id=100000754566376"; membros[10][4] = "http://linkedin.com/in/júlia-pimentel-prado-a4675b165";
+    membros[10][5] = "img/team/julia_prado.jpg"; 
+
     // 12° Membro
-    membros[11][0] = "Robson Baioco"; membros[11][1] = "Conselheiro";
-    membros[11][2] = "https://github.com/robsonbaioco"; membros[11][3] = "https://www.facebook.com/robsonsamir.baioco"; membros[11][4] = "https://www.linkedin.com/in/robson-samir-baioco-9b4105121/";
-    membros[11][5] = "img/team/robson_baioco.jpg";
+    membros[11][0] = "Felipe Almeida"; membros[11][1] = "Projetos";
+    membros[11][2] = "https://github.com/fellimao"; membros[11][3] = "https://www.facebook.com/felipe.lopesdealmeida.9"; membros[11][4] = "https://www.linkedin.com/in/felipe-lim%C3%A3o-lopes-de-almeida-914a46165/";
+    membros[11][5] = "img/team/felipe_almeida.jpg";
 
-    // 13° Membro
-    membros[12][0] = "Thais Jesus"; membros[12][1] = "Conselheira";
-    membros[12][2] = "#"; membros[12][3] = "https://www.facebook.com/thaishelena.jesus"; membros[12][4] = "https://www.linkedin.com/in/thais-helena-de-paula-jesus-618495162";
-    membros[12][5] = "img/team/thais_jesus.jpg";
+	// 13° Membro
+    membros[12][0] = "Leonardo Martinez"; membros[12][1] = "Financeiro";
+    membros[12][2] = "https://github.com/LeonardoTres"; membros[12][3] = "https://www.facebook.com/leonardo.martinez.16718979"; membros[12][4] = "https://www.linkedin.com/in/leonardo-martinez-664366110/";
+    membros[12][5] = "img/team/leonardo_martinez.jpg"; 
 
-    // 14° Membro
-    membros[13][0] = "Tiago Kapp"; membros[13][1] = "Diretor de RH";
+  // 14° Membro
+    membros[13][0] = "Alessandra Santos"; membros[13][1] = "Recursos Humanos";
     membros[13][2] = "#"; membros[13][3] = "#"; membros[13][4] = "#";
-    membros[13][5] = "img/team/tiago_kapp.jpg";
-
-    // 15° Membro
-    membros[14][0] = "Veronica Silva"; membros[14][1] = "Presidente";
-    membros[14][2] = "https://github.com/VeronicaSouzaSilva?tab=stars"; membros[14][3] = "https://www.facebook.com/veronica.silva.9275439"; membros[14][4] = "https://www.linkedin.com/in/ver%C3%B4nica-souza-silva-702387160/";
-    membros[14][5] = "img/team/veronica_silva.jpg";
-
-    // 16° Membro
-    membros[15][0] = "Victor Oliveira"; membros[15][1] = "Marketing";
-    membros[15][2] = "#"; membros[15][3] = "fb.com/tiefighter"; membros[15][4] = "https://www.linkedin.com/in/victoroj";
-    membros[15][5] = "img/team/victor_oliveira.jpg";
-
-    // 17° Membro
-    membros[16][0] = "Luma Gallacio"; membros[16][1] = "Projetos";
-    membros[16][2] = "https://github.com/lumagallacio"; membros[16][3] = "https://www.linkedin.com/in/luma-gallacio-4a90b4aa/"; membros[16][4] = "https://www.facebook.com/luma.gallacio";
-    membros[16][5] = "img/team/luma.jpg";
-
-    // 18° Membro
-    membros[17][0] = "Larissa Okano"; membros[17][1] = "RH";
-    membros[17][2] = "#"; membros[17][3] = "https://www.facebook.com/larissa.okano"; membros[17][4] = "https://www.linkedin.com/in/larissa-miyuki-okano-8b867a16a/";
-    membros[17][5] = "img/team/larissa_okano.jpg";
- 
-	// 19° Membro
-    membros[18][0] = "Felipe Nascimento"; membros[18][1] = "Financeiro";
-    membros[18][2] = "https://github.com/felipemanuel"; membros[18][3] = "facebook.com/felipe.chiocca"; membros[18][4] = "https://www.linkedin.com/in/felipe-nascimento-47a74315b/";
-    membros[18][5] = "img/team/felipe_nascimento.jpg";
-
-    // 20° Membro
-    membros[19][0] = "Beatriz Miranda"; membros[19][1] = "Projetos";
-    membros[19][2] = "https://github.com/BeaMtrix"; membros[19][3] = "https://www.linkedin.com/in/beatriz-miranda-b81345165/"; membros[19][4] = "https://www.facebook.com/beatriz.miranda.7771";
-    membros[19][5] = "img/team/beatriz_miranda.jpg";
-
-    // 21° Membro
-    membros[20][0] = "Clarice Abreu"; membros[20][1] = "Qualidade";
-    membros[20][2] = "https://github.com/clariceabreu"; membros[20][3] = "https://www.facebook.com/clarice.ferreira.77"; membros[20][4] = "https://www.linkedin.com/in/clarice-abreu-9046bb140/";
-    membros[20][5] = "img/team/clarice_abreu.jpg";
-
-	// 22° Membro
-    membros[21][0] = "Julia Prado"; membros[21][1] = "Marketing";
-    membros[21][2] = "https://github.com/juupr4do"; membros[21][3] = "https://www.facebook.com/profile.php?id=100000754566376"; membros[21][4] = "http://linkedin.com/in/júlia-pimentel-prado-a4675b165";
-    membros[21][5] = "img/team/julia_prado.jpg"; 
-
-    // 23° Membro
-    membros[22][0] = "Felipe Almeida"; membros[22][1] = "Projetos";
-    membros[22][2] = "https://github.com/fellimao"; membros[22][3] = "https://www.facebook.com/felipe.lopesdealmeida.9"; membros[22][4] = "https://www.linkedin.com/in/felipe-lim%C3%A3o-lopes-de-almeida-914a46165/";
-    membros[22][5] = "img/team/felipe_almeida.jpg";
-
-    // 24° Membro
-    membros[23][0] = "Letícia Silva"; membros[23][1] = "Marketing";
-    membros[23][2] = "https://github.com/Leticiasb"; membros[23][3] = "https://www.facebook.com/lele.mell"; membros[23][4] = "https://www.linkedin.com/in/let%C3%ADcia-silva-barbosa-a87aa6165/";
-    membros[23][5] = "img/team/leticia_silva.jpg";
-
-	// 25° Membro
-    membros[24][0] = "Leonardo Martinez"; membros[24][1] = "Financeiro";
-    membros[24][2] = "https://github.com/LeonardoTres"; membros[24][3] = "https://www.facebook.com/leonardo.martinez.16718979"; membros[24][4] = "https://www.linkedin.com/in/leonardo-martinez-664366110/";
-    membros[24][5] = "img/team/leonardo_martinez.jpg"; 
-
-    // 26° Membro
-    membros[25][0] = "Alessandra Santos"; membros[25][1] = "RH";
-    membros[25][2] = ""; membros[25][3] = ""; membros[25][4] = "";
-    membros[25][5] = "img/team/alessandra_santos.jpg";
-
-    // 27° Membro
-    membros[26][0] = "João Guilherme Pereira"; membros[26][1] = "Marketing";
-    membros[26][2] = "https://github.com/JoaoGuilhermePereira"; membros[26][3] = "https://www.facebook.com/joao.guilherme.167527"; membros[26][4] = "https://www.linkedin.com/in/joao-guilherme-pereira-822b52171";
-    membros[26][5] = "img/team/joao_pereira.jpg";
-
+    membros[13][5] = "img/team/alessandra_santos.jpg";
 	
     /* X° Membro
-    membros[18][0] = "nome";
-    membros[18][1] = "cargo";
-    membros[18][2] = "#github";
-    membros[18][3] = "#facebook";
-    membros[18][4] = "#linkedin";
-    membros[18][5] = "img/team/nathan_zanuto.jpg"; // Endereco da imagem.  */
+    membros[x][0] = "nome"; membros[x][1] = "cargo";
+    membros[x][2] = "#github";  membros[x][3] = "#facebook";  membros[x][4] = "#linkedin";
+    membros[x][5] = "img/team/nome_sobrenome.jpg"; // Endereco da imagem.  */
 
     function infoMembros(){
         var i;
@@ -480,9 +410,7 @@
         }
     }
 
-  </script>
-  
-  	
+  </script> 	
 
   <!-- MEMBROS -->
 	<div id="myCarousel" class="carousel slide" data-interval="5000" data-ride="carousel">
@@ -495,25 +423,22 @@
           </div>
         </div>
 
-        <!-- Indicators -->
+        <!-- Indicators, bolinhas embaixo das fotos, sempre que for necessário aumentar/diminuir
+		a quantidade de sessões precisa alterar aqui, atentando para não repetir o índice-->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
           <li data-target="#myCarousel" data-slide-to="3"></li>
           <li data-target="#myCarousel" data-slide-to="4"></li>
-          <li data-target="#myCarousel" data-slide-to="5"></li>
-          <li data-target="#myCarousel" data-slide-to="6"></li>
-          <li data-target="#myCarousel" data-slide-to="7"></li>
-          <li data-target="#myCarousel" data-slide-to="8"></li>
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active"> <!-- Sessão1: primeira "página de membros" -->
 
-  					<div class="row">
-  						<div class="col-sm-4">
+  					<div class="row"> <!-- primeiro bloco de membros, sessão = 3 pessoas-->
+  						<div class="col-sm-4"> <!-- cada tag dessa abriga os dados de um membro-->
   							<div class="team-member">
   								<img class="mx-auto rounded-circle" id="endereco_imagem_membro1"  src="img/team/member.jpg" alt="" >
   								<h4> <div id="nome_membro1"> <!-- NOME DO MEMBRO 1 --> </div> </h4>
@@ -873,347 +798,10 @@
   								</ul>
   							</div>
   						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro15" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro15"> <!-- NOME DO MEMBRO 15 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro15"> <!-- CARGO DO MEMBRO 15 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro15" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro15" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro15" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
   					</div>
           </div> <!-- fim 5° myslides -->
 		  
-			<!-- Sessão6: sexta "página de membros" -->
-			<div class="item ">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="team-member">
-							<img class="mx-auto rounded-circle" id="endereco_imagem_membro16" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro16"> <!-- NOME DO MEMBRO 16 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro16"> <!-- CARGO DO MEMBRO 16 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro16" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro16" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro16" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro17" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro17"> <!-- NOME DO MEMBRO 17 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro17"> <!-- CARGO DO MEMBRO 17 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro17" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro17" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro17" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro18" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro18"> <!-- NOME DO MEMBRO 18 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro18"> <!-- CARGO DO MEMBRO 18 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro18" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro18" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro18" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  					</div>
-          </div> <!-- fim 6° myslides -->
-		  
-			<!-- Sessão7: setma "página de membros" -->
-			<div class="item ">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="team-member">
-							<img class="mx-auto rounded-circle" id="endereco_imagem_membro19" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro19"> <!-- NOME DO MEMBRO 19 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro19"> <!-- CARGO DO MEMBRO 19 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro19" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro19" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro19" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro20" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro20"> <!-- NOME DO MEMBRO 20 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro20"> <!-- CARGO DO MEMBRO 20 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro20" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro20" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro20" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro21" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro21"> <!-- NOME DO MEMBRO 21 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro21"> <!-- CARGO DO MEMBRO 21 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro21" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro21" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro21" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  					</div>
-          </div> <!-- fim 7° myslides -->
-		  
-			<!-- Sessão8: oitava "página de membros" -->
-			<div class="item ">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="team-member">
-							<img class="mx-auto rounded-circle" id="endereco_imagem_membro22" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro22"> <!-- NOME DO MEMBRO 22 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro22"> <!-- CARGO DO MEMBRO 22 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro22" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro22" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro22" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro23" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro23"> <!-- NOME DO MEMBRO 23 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro23"> <!-- CARGO DO MEMBRO 23 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro23" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro23" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro23" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro24" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro24"> <!-- NOME DO MEMBRO 24 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro24"> <!-- CARGO DO MEMBRO 24 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro24" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro24" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro24" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  					</div>
-          </div> <!-- fim 8° myslides -->
-		<!-- Sessão9: nona "página de membros" -->
-			<div class="item ">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="team-member">
-							<img class="mx-auto rounded-circle" id="endereco_imagem_membro25" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro25"> <!-- NOME DO MEMBRO 25 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro25"> <!-- CARGO DO MEMBRO 25 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro25" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro25" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro25" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro26" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro26"> <!-- NOME DO MEMBRO 26 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro26"> <!-- CARGO DO MEMBRO 26 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  									 	<a id="rede_social1_membro26" href="#" target="_blank">
-  											<i class="fa fa-github"></i>
-  										</a> 
-									<!--	<a href="#">
-  											<i class="fa fa-github"></i>
-  										</a>  -->
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro26" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro26" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  						<div class="col-sm-4">
-  							<div class="team-member">
-  								<img class="mx-auto rounded-circle" id="endereco_imagem_membro27" src="img/team/member.jpg" alt="">
-  								<h4> <div id="nome_membro27"> <!-- NOME DO MEMBRO 27 --> </div> </h4>
-  								<p class="text-muted"> <div id="cargo_membro27"> <!-- CARGO DO MEMBRO 27 --> </div> </p>
-  								<ul class="list-inline social-buttons">
-  									<li class="list-inline-item">
-  										<a id="rede_social1_membro27" href="#" target="_blank"> 
-  										<!--<a id="" href="#" target=""> -->
-  											<i class="fa fa-github"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social2_membro27" href="#" target="_blank" >
-  											<i class="fa fa-facebook"></i>
-  										</a>
-  									</li>
-  									<li class="list-inline-item">
-  										<a id="rede_social3_membro27" href="#" target="_blank">
-  											<i class="fa fa-linkedin"></i>
-  										</a>
-  									</li>
-  								</ul>
-  							</div>
-  						</div>
-  					</div>
-          </div> <!-- fim 9° myslides -->
+			
            
 	  </div> <!-- Fim carrousel inner -->
 
@@ -1272,7 +860,9 @@
                 </p>
             </p>
             <p align="center">
-              <button class="btn btn-primary btn-xl text-uppercase"> Inscreva-se já! </button>
+              <a href="http://bit.ly/processo-seletivo-infobio2019">
+			  <button class="btn btn-primary btn-xl text-uppercase">  Inscreva-se já! </button>
+			  </a> 
             </p>
             
         </div>
@@ -1285,7 +875,6 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate>
               <div class="row">
                 <div class="col-md-6">
                   <!-- Localizacao -->
@@ -1338,45 +927,37 @@
                   <div class="col-lg-12 text-center">
 										<h2 class="section-heading text-uppercase">Contato</h2>
 									</div>
-									<div class="form-group">
-                    <p><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-                    Em breve!
-                    <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span></p>
-									</div>
+                    <form  id="form1" name="form1" method="post" action="mail\contact_me.php">
 										<div class="form-group">
-											<input disabled class="form-control" id="name" name="name" type="text" placeholder="Seu nome *" required data-validation-required-message="Por favor coloque seu nome.">
+											<input class="form-control" id="name" name="name" type="text" placeholder="Seu nome *" required data-validation-required-message="Por favor coloque seu nome.">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input disabled class="form-control" id="email" name="email" type="email" placeholder="Seu Email *" required data-validation-required-message="Por favor coloque seu email.">
+											<input class="form-control" id="email" name="email" type="email" placeholder="Seu Email *" required data-validation-required-message="Por favor coloque seu email.">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<input disabled class="form-control" id="assunto" name="assunto" type="text" placeholder="Assunto *" required data-validation-required-message="Por favor coloque o Assunto.">
+											<input class="form-control" id="assunto" name="assunto" type="text" placeholder="Assunto *" required data-validation-required-message="Por favor coloque o Assunto.">
 											<p class="help-block text-danger"></p>
 										</div>
 										<div class="form-group">
-											<textarea disabled class="form-control" id="message" name="message" placeholder="Sua mensagem *" required data-validation-required-message="Por favor coloque sua mensagem."></textarea>
+											<textarea class="form-control" id="message" name="message" placeholder="Sua mensagem *" required data-validation-required-message="Por favor coloque sua mensagem."></textarea>
 											<p class="help-block text-danger"></p>
 										</div>
-										<div id="success"></div>
-											<button disabled name="submit" id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" value="submit">Enviar mensagem</button>
-										</div>
-									</div>
+											<input name="submit" id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" value="Enviar mensagem" />
+                                    </form>
                 <div class="clearfix"></div>
-
-            </form>
+              </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Footer -->
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; InfoBio 2018</span>
+            <span class="copyright">Copyright &copy;  2018 InfoBio Júnior. Todos os direitos reservados.</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
@@ -1391,7 +972,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.linkedin.com/company/infobio-jr-/">
+                <a href="https://www.linkedin.com/in/infobio-jr-813035177/">
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
@@ -1424,7 +1005,6 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
-
   </body>
 
 </html>
