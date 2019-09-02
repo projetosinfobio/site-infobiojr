@@ -23,19 +23,21 @@ $assunto = strip_tags(htmlspecialchars($_POST['assunto']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
 
 $mail = new PHPMailer;
+
+$email_da_infobio = '';
    
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com;smtp2.example.com';     // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'E-mail da infobio';                  // SMTP username
+$mail->Username = $email_da_infobio;                  // SMTP username
 $mail->Password = 'Senha da infobio';                    // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('E-mail da infobio', $name_from);        // O email da infobio vai aqui por conta de restrições do google
-$mail->addAddress('Email da infobio', 'InfoBio');     // Add a recipient
+$mail->setFrom($email_da_infobio, $name_from);        // O email da infobio vai aqui por conta de restrições do google
+$mail->addAddress($email_da_infobio, 'InfoBioJr');     // Add a recipient
 
 $mail->isHTML(true);                                  // Set email format to HTML
 
