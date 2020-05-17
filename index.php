@@ -167,7 +167,6 @@
           </div>
           <div class="intro-heading"><h1>
             <!-- <p class="typewrite" data-period="2000" data-type='["Fundada em 2006", "Mais de 50 projetos realizados", "Pioneira da área no Brasil", "Processo seletivo semestral", "Contou com mais de 100 membros"]'> -->
-            <p class="typewrite" data-period="2000" data-type='["Fundada em 2006", "Pioneira da área no Brasil", "Processo seletivo semestral"]'>
             <p class="typewrite branco" data-period="2000" data-type='["Fundada em 2006", "Pioneira da área no Brasil", "Processo seletivo semestral"]'>
               <span class="wrap"></span>
             </p>
@@ -1091,7 +1090,6 @@
   </div> <!-- Fim do carrousel-->
 
 
-  <div vw class="enabled">
   <div vw class="enabled libras">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
