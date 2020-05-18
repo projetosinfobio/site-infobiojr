@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!-- B2: Script para menu -->
 <script>
   var TxtType = function(el, toRotate, period) {
@@ -10,8 +9,8 @@
         this.tick();
         this.isDeleting = false;
     };
-
-
+    
+    
     TxtType.prototype.tick = function() {
         var i = this.loopNum % this.toRotate.length;
         var fullTxt = this.toRotate[i];
@@ -104,6 +103,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
+      
+    <!--Alto contraste-->
+    <link href="css/contrast.css" rel="stylesheet">
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130731311-1"></script>
@@ -120,6 +122,7 @@
   <!-- Assim que a página for carregada, todas informações de cada membros serão colocados -->
   <body id="page-top" onload="textos(); infoMembros();">
       
+      
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
@@ -134,7 +137,7 @@
                 <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
               </li>
               <!--<li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#portfolio">Oi Bemol</a>
+                <a class="nav-link js-scroll-trigger" href="#portfolio">Projetos</a>
               </li>-->
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#about">Quem Somos</a>
@@ -163,7 +166,7 @@
           </div>
           <div class="intro-heading"><h1>
             <!-- <p class="typewrite" data-period="2000" data-type='["Fundada em 2006", "Mais de 50 projetos realizados", "Pioneira da área no Brasil", "Processo seletivo semestral", "Contou com mais de 100 membros"]'> -->
-            <p class="typewrite" data-period="2000" data-type='["Fundada em 2006", "Pioneira da área no Brasil", "Processo seletivo semestral"]'>
+            <p class="typewrite branco" data-period="2000" data-type='["Fundada em 2006", "Pioneira da área no Brasil", "Processo seletivo semestral"]'>
               <span class="wrap"></span>
             </p>
           </h1>
@@ -1086,7 +1089,7 @@
   </div> <!-- Fim do carrousel-->
 
 
-  <div vw class="enabled">
+  <div vw class="enabled libras">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
@@ -1096,6 +1099,13 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+<!--Alto Contraste-->
+    <div class="contraste libras" data-toggle="tooltip" title="Mudar contraste" data-placement="left">
+        <div vw-access-button class="contrasteButton">
+            <img class="access-button" src="img/logos/68011.png" style="width:27%; float:right;" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">
+        </div>
+    </div>
+
 
   <!-- PROCESSO SELETIVO -->
   <section class="py-4" id="procelSeletivo">
@@ -1241,7 +1251,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="rodape">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -1285,6 +1295,8 @@
       </div>
     </footer>
 
+    <!-- Alto contraste -->
+    <script src="js/altocontraste.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1298,6 +1310,12 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+        
+    <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
         
     </body>
 </html>
