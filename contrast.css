@@ -52,3 +52,10 @@
 .branco{
     color: snow !important;
 }
+/*Quebra de cor no footer*/
+.contrast #contato{
+  background-color: rgb(43, 42, 42) !important;
+}
+.contrast #rodape{
+  background-color: rgb(29, 30, 31) ;
+}
