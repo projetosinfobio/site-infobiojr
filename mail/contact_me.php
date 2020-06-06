@@ -29,7 +29,7 @@ $email_da_infobio = 'infobiojunior@gmail.com';
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com;smtp2.gmail.com';     // Specify main and backup SMTP servers
+$mail->Host = 'smtp.gmail.com;smtp2.example.com';     // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = $email_da_infobio;                  // SMTP username
 $mail->Password = 'InfobioJr@0!8';                    // SMTP password
