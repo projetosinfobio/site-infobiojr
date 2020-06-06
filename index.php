@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!-- B2: Script para menu -->
 <script>
   var TxtType = function(el, toRotate, period) {
@@ -170,6 +169,7 @@
           </div>
           <div class="intro-heading"><h1>
             <!-- <p class="typewrite" data-period="2000" data-type='["Fundada em 2006", "Mais de 50 projetos realizados", "Pioneira da área no Brasil", "Processo seletivo semestral", "Contou com mais de 100 membros"]'> -->
+
             <p class="typewrite branco" data-period="2000" data-type='["Fundada em 2006", "Pioneira da área no Brasil", "Processo seletivo semestral", "Qualidade e excelência sempre"]'>
               <span class="wrap"></span>
             </p>
@@ -1134,6 +1134,13 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+<!--Alto Contraste-->
+    <div class="contraste libras" data-toggle="tooltip" title="Mudar contraste" data-placement="left">
+        <div vw-access-button class="contrasteButton">
+            <img class="access-button" src="img/logos/68011.png" style="width:27%; float:right;" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">
+        </div>
+    </div>
+
 
     <div class="contraste libras" data-toggle="tooltip" title="Mudar contraste" data-placement="left">
         <div vw-access-button class="contrasteButton">
