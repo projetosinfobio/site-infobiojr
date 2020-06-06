@@ -1,0 +1,97 @@
+body{
+    transition: all 0.2s ease-out;
+}
+
+.gestao {
+  --bg-color: #e52727;
+  --bg-color-light: #ffeeba;
+  --text-color-hover: white;
+  --box-shadow-color: rgba(191, 46, 52, 0.66);
+}
+
+.bioinformatica {
+  --bg-color: #36a773;
+  --bg-color-light: #e2fced;
+  --text-color-hover: #4C5656;
+  --box-shadow-color: rgba(38, 137, 69, 0.48);
+}
+
+.imagens {
+  --bg-color: #35507F;
+  --bg-color-light: #ffeeba;
+  --text-color-hover: white;
+  --box-shadow-color: rgba(53, 80, 127, 0.66);
+}
+
+.bioeng {
+  --bg-color: #14f52e;
+  --bg-color-light: #f1f7ff;
+  --text-color-hover: #4C5656;
+  --box-shadow-color: rgba(21, 252, 30, 0.48);
+}
+
+.cursos {
+  --bg-color: #c78f11;
+  --bg-color-light: #f1f7ff;
+  --text-color-hover: #4C5656;
+  --box-shadow-color: rgba(224, 255, 0, 0.61);
+}
+
+.carta {
+    background-color: #fff;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.2s ease-out;
+}
+
+.final{
+    width: 100%;
+}
+
+.padding{
+    padding-bottom: 10px;
+}
+
+.carta:hover {
+  border: 1px;
+  border-style: solid;
+  border-color: var(--bg-color);
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.carta:hover .overlay {
+  transform: scale(5) translateZ(0);
+}
+
+
+.carta:hover h3 {
+  color: var(--text-color-hover);
+}
+
+.carta:active {
+  transform: scale(1) translateZ(0);
+  box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.carta p {
+  font-size: 17px;
+  color: #4C5656;
+  margin-top: 30px;
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+
+
+.overlay {
+  width: 50%;
+  position: absolute; 
+  height: 118px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 70px;
+  left: 50px;
+  z-index: 0;
+  transition: transform 0.25s ease-out;
+}

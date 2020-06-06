@@ -108,6 +108,9 @@
     <!--Alto contraste-->
     <link href="css/contrast.css" rel="stylesheet">
     
+    <!--Cards-->
+    <link href="css/cards.css" rel="stylesheet">
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130731311-1"></script>
   <script>
@@ -167,7 +170,7 @@
           </div>
           <div class="intro-heading"><h1>
             <!-- <p class="typewrite" data-period="2000" data-type='["Fundada em 2006", "Mais de 50 projetos realizados", "Pioneira da área no Brasil", "Processo seletivo semestral", "Contou com mais de 100 membros"]'> -->
-            <p class="typewrite branco" data-period="2000" data-type='["Fundada em 2006", "Pioneira da área no Brasil", "Processo seletivo semestral"]'>
+            <p class="typewrite branco" data-period="2000" data-type='["Fundada em 2006", "Pioneira da área no Brasil", "Processo seletivo semestral", "Qualidade e excelência sempre"]'>
               <span class="wrap"></span>
             </p>
           </h1>
@@ -184,7 +187,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
-              <h3 class="section-heading text-uppercase"> Nos apoiamos a semana brasileira de informática biomédica </h3>
+              <h3 class="section-heading text-uppercase"> Nós apoiamos a semana brasileira de informática biomédica </h3>
             </div>
            
           </div>
@@ -214,44 +217,75 @@
 
 
     <!-- Servicos -->
-    <section class="py-4" id="services">
+    <section class="py-4 bg-light" id="services">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
               <h2 class="section-heading text-uppercase">Serviços</h2>
           </div>
           <div class="row text-center">
-            <div class="col-md-4">
-              <img class="" src="img/services/criacao-de-sites1.png" alt="" height="196" width="196">
-              <h4 class="service-heading">Criação de Sites</h4>
-              <p class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvimento de sistemas web, tanto estáticos quanto dinâmicos, visando maior usabilidade, qualidade e compatibilidade. </p>
+            <div class="col-md-4 padding">    
+                <div class="card carta gestao text-center">
+                  <div class="card-body">
+                    <h5 class="card-title">Websites</h5>
+                    <img src="img/services/criacao-de-sites1.png" alt="" height="196" width="196" style="z-index:100">
+                    <p class="card-text">Desenvolvimento de sistemas web, tanto estáticos quanto dinâmicos, visando maior usabilidade, qualidade e compatibilidade. </p>
+                    <!--<a href="#" class="btn btn-primary final">Saiba mais</a>-->
+                  </div>
+                </div>
+                
             </div>
-            <div class="col-md-4">
-              <img class="" src="img/services/bioinformatica.png" alt="" height="196" width="196">
-              <h4 class="service-heading">Bioinformática</h4>
-              <p class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;Modelagem e simulação de problemas biológicos envolvendo grande volume de dados, análise estrutural, montagem de genomas e análise de expressão gênica. </p>
+            <div class="col-md-4 padding">
+                <div class="card carta gestao text-center">
+                  <div class="card-body">
+                    <h5 class="card-title">Sistemas de gestão</h5>
+                    <img class="" src="img/services/gestao-em-saude.png" alt="" height="196" width="196">
+                    <p class="card-text">Desenvolvimento de sistemas voltados à organização, gerenciamento e representação de dados clínicos e serviços hospitalares.</p>
+                    <!--<a href="#" class="btn btn-primary final">Saiba mais</a>-->
+                  </div>
+                </div>
             </div>
-            <div class="col-md-4">
-              <img class="" src="img/services/cursos.png" alt="" height="196" width="196">
-              <h4 class="service-heading">Cursos</h4>
-              <p class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;Oferecimento de cursos com parceria de grandes empresas, sobre os mais diversos assuntos de tecnologia, empreendedorismo e desenvolvimento pessoal. </p>
+            <div class="col-md-4 padding">
+            <div class="card carta bioinformatica text-center">
+                  <div class="card-body">
+                    <h5 class="card-title">Análise de dados genômicos</h5>
+                    <img class="" src="img/services/bioinformatica.png" alt="" height="196" width="196">
+                    <p class="card-text">Modelagem e simulação de problemas biológicos envolvendo grande volume de dados, análise estrutural, montagem de genomas e análise de expressão gênica. </p>
+                    <!--<a href="#" class="btn btn-primary final">Saiba mais</a>-->
+                  </div>
+                </div>
             </div>
           </div>
           <div class="row text-center">
-            <div class="col-md-4">
-              <img class="" src="img/services/gestao-em-saude.png" alt="" height="196" width="196">
-              <h4 class="service-heading">Gestão em Saúde</h4>
-              <p class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvimento de sistemas voltados à organização, gerenciamento e representação de dados clínicos, serviços hospitalares e tecnologia assistiva. </p>
+            <div class="col-md-4 padding">
+              <div class="card carta cursos text-center">
+                  <div class="card-body">
+                    <h5 class="card-title">Cursos</h5>
+                    <img class="" src="img/services/cursos.png" alt="" height="196" width="196">
+                    <p class="card-text">Oferecimento de cursos com parceria de grandes empresas, sobre os mais diversos assuntos de tecnologia, empreendedorismo e desenvolvimento pessoal. </p>
+                    <!--<a href="#" class="btn btn-primary final">Saiba mais</a>-->
+                  </div>
+                </div>
             </div>
-            <div class="col-md-4">
-              <img class="" src="img/services/processamento-de-imagens.png" alt="" height="196" width="196">
-              <h4 class="service-heading">Imagens Médicas</h4>
-              <p class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;Desenvolvimento de sistemas de apoio à decisão médica, por meio de algoritmos para aquisição, tratamento e análise de sinais e imagens. </p>
+            <div class="col-md-4 padding">
+                <div class="card carta imagens text-center">
+                  <div class="card-body">
+                    <h5 class="card-title">Sistemas de diagnóstico auxiliado por computador</h5>
+                    <img class="" src="img/services/processamento-de-imagens.png" alt="" height="196" width="196">
+                    <p class="card-text">Desenvolvimento de sistemas de apoio à decisão médica, por meio de algoritmos para aquisição, tratamento e análise de sinais e imagens. </p>
+                    <!--<a href="#" class="btn btn-primary final">Saiba mais</a>-->
+                  </div>
+                </div>
             </div>
-              <div class="col-md-4">
-              <img class="" src="img/services/bioengenharia.png" alt="" height="196" width="196">
-              <h4 class="service-heading">Bioengenharia</h4>
-              <p class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;É voltada para o desenvolvimento de aplicativos, soluções e sistemas aplicados ao corpo humano utilizando técnicas e equipamentos como prototipagem, fotoelasticidade e etc. </p>
+              <div class="col-md-4 padding">
+              <div class="card carta bioeng text-center">
+                  <div class="card-body">
+                    <h5 class="card-title">Bioengenharia</h5>
+                    <img class="" src="img/services/bioengenharia.png" alt="" height="196" width="196">
+                    <p class="card-text">É voltada para o desenvolvimento de aplicativos, soluções e sistemas aplicados ao corpo humano utilizando técnicas e equipamentos como prototipagem, fotoelasticidade e etc. </p>
+                    <!--<a href="#" class="btn btn-primary final">Saiba mais</a>-->
+                  </div>
+                </div>
             </div>
             <!--<div class="col-md-4">
               <img class="" src="img/services/responsabilidade-social.png" alt="" height="196" width="196">
@@ -328,15 +362,15 @@
           </div>
           <div class="row text-center">
             <div class="col-md-4">
-              <img class="" src="img/about/icone-missao-1.png" alt="" style="width:250px;height:250px;">
+              <img class="" src="img/about/icone-missao-1.jpg" alt="" style="width:250px;height:250px;">
               <p class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;Desenvolver sistemas computacionais na área da saúde para clientes interessados em inovação e qualidade, proporcionando aos nossos membros uma inserção no mercado de trabalho ainda na graduação.</p>
             </div>
             <div class="col-md-4">
-              <img class="" src="img/about/icone-visao-1.png" alt="" style="width:250px;height:250px;">
+              <img class="" src="img/about/icone-visao-1.jpg" alt="" style="width:250px;height:250px;">
               <p class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;Consolidar-se como empresa na área de informática biomédica, capacitando os alunos para atuarem no mercado.</p>
             </div>
             <div class="col-md-4">
-              <img class="" src="img/about/icone-valores-1.png" alt="" style="width:250px;height:250px;">
+              <img class="" src="img/about/icone-valores-1.jpg" alt="" style="width:250px;height:250px;">
               <p class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp; Trabalho em equipe, Comprometimento, Iniciativa, Qualidade e Inovação.</p>
             </div>
           </div>
@@ -433,7 +467,7 @@
     membros[12][1] = "Financeiro";
     membros[12][2] = "https://github.com/LucianoAGit"; 
     membros[12][3] = "https://www.facebook.com/lucianogabriel.araujo3"; 
-    membros[12][4] = "#";
+    membros[12][4] = "https://www.linkedin.com/in/luciano-gabriel-araujo-b29a581ab/";
     membros[12][5] = "img/team/luciano_araujo.jpg";
       
     // 14° Membro
@@ -482,7 +516,7 @@
     membros[18][2] = "https://github.com/JuSakamoto"; 
     membros[18][3] = "https://www.facebook.com/juliana.sakamoto.3"; 
     membros[18][4] = "https://www.linkedin.com/in/juliana-sakamoto-227ab11a5/";
-    membros[18][5] = "img/team/member.jpg";
+    membros[18][5] = "img/team/juliana_sakamoto.jpg";
     
     // 20° Membro
     membros[19][0] = "Pedro Martins"; 
@@ -490,7 +524,7 @@
     membros[19][2] = "https://github.com/ownede2"; 
     membros[19][3] = "https://www.facebook.com/pedroemilio.andrade"; 
     membros[19][4] = "https://www.linkedin.com/in/pedro-emilio-andrade-martins-1337151a6/";
-    membros[19][5] = "img/team/member.jpg";
+    membros[19][5] = "img/team/pedro_martins.jpg";
       
     /* X° Membro
     membros[x][0] = "nome"; membros[x][1] = "cargo";
@@ -1127,7 +1161,7 @@
             <img class="mx-auto rounded-circle" src="img/Mario_Adolfi.png" alt="Mario Adolfi - Co-Fundador da empresa Kidopi">
             <h4> Mário Sergio Adolfi </h4>
             <p> Depoimento do Co-Fundador e Diretor Executivo da Kidopi </p>
-            <p class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;Tive a gratificante oportunidade de, durante 3 anos de minha vida acadêmica, ser membro da InfoBio Jr. Ao exercer os cargos de Estagiário, Diretor de Projetos e Presidente tive grande desenvolvimento de meu lado empreendedor, recomendo a todos que aproveitem esta oportunidade e que façam parte da InfoBio. Esta experiência foi de grande importância para minha formação! </p>
+            <p class="text-muted"> &nbsp;&nbsp;&nbsp;&nbsp;Tive a gratificante oportunidade de, durante 3 anos da minha vida acadêmica, ser membro da InfoBio Jr. Ao exercer os cargos de Estagiário, Diretor de Projetos e Presidente tive grande desenvolvimento de meu lado empreendedor, recomendo a todos que aproveitem esta oportunidade e que façam parte da InfoBio. Esta experiência foi de grande importância para minha formação! </p>
           </div>
         </div>
 
@@ -1204,7 +1238,7 @@
             
             <div class="row">
               <div class="icon"><i class="fa fa-envelope"></i></div> &nbsp; &nbsp;
-              <div class="info"><p>contato@infobiojr.com.br</p></div>
+              <div class="info"><p>infobiojr@fmrp.usp.br</p></div>
             </div>
             
             <div class="row">
@@ -1256,7 +1290,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy;  2020 InfoBio Júnior. Todos os direitos reservados.</span>
+            <span class="copyright">Copyright &copy;  2020 InfoBio Júnior. <br>Todos os direitos reservados.</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
@@ -1284,12 +1318,13 @@
           </div>
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
-              <li class="list-inline-item">
+                <span>Feito com amor pela InfobioJr</span>
+              <!--<li class="list-inline-item">
                 <a href="#">Privacy Policy</a>
               </li>
               <li class="list-inline-item">
                 <a href="#">Terms of Use</a>
-              </li>
+              </li>-->
             </ul>
           </div>
         </div>

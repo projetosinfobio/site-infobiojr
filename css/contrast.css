@@ -31,6 +31,10 @@
 .contrast p {
   color: snow !important;
 }
+
+.contrast .card{
+    background-color: black;
+}
 /*Ícones de rede social*/
 .contrast ul.social-buttons li a {
   background-color: snow;
@@ -51,4 +55,11 @@
 
 .branco{
     color: snow !important;
+}
+/*Quebra de cor no footer*/
+.contrast #contato{
+  background-color: rgb(43, 42, 42) !important;
+}
+.contrast #rodape{
+  background-color: rgb(29, 30, 31) ;
 }
