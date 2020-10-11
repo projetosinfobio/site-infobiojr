@@ -1,4 +1,3 @@
-
 .contrast {
   /*Muda: background*/
   background-color: rgb(29, 30, 31);
@@ -12,6 +11,8 @@
           .typewrite{
             color: black !important;
           }
+
+
 .contrast a {
   color: snow;
 }
@@ -27,74 +28,20 @@
 .contrast img {
   filter: grayscale(100%) contrast(100%);
 }
+
+.contrast .sobre{
+}
+
+.content .content-overlay{
+  background: rgba(0,0,0,1);
+}
+
 .contrast p {
   color: snow !important;
 }
 
 .contrast .card{
     background-color: black;
-}
-/*Ícones de rede social*/
-.contrast ul.social-buttons li a {
-  background-color: snow;
-  color: black;
-}
-/*Background - membros*/
-.contrast .bg-light {
-  background-color: rgb(29, 30, 31) !important;
-}
-.contrast .btn-primary {
-  background-color: snow;
-  color: black;
-}
-
-.contrast .portfolio-caption {
-  background-color: rgb(29, 30, 31) !important;
-}
-
-.branco{
-    color: snow !important;
-}
-/*Quebra de cor no footer*/
-.contrast #contato{
-  background-color: rgb(43, 42, 42) !important;
-}
-.contrast #rodape{
-  background-color: rgb(29, 30, 31) ;
-}
-=======
-.contrast {
-  /*Muda: background*/
-  background-color: rgb(29, 30, 31);
-  color: snow;
-}
-.contrast #mainNav {
-  background-color: rgb(29, 30, 31);
-  
-}
-.contrast .intro-lead-in, /*Texto do banner inicial*/
-          .typewrite{
-            color: black !important;
-          }
-
-
-.contrast a {
-  color: snow;
-}
-.contrast button {
-  background-color: snow !important;
-  color: black !important;
-}
-/*Imagem do header em p&b*/
-.contrast header {
-  filter: grayscale(100%) contrast(100%);
-}
-/*Outras imagens em p&b*/
-.contrast img {
-  filter: grayscale(100%) contrast(100%);
-}
-.contrast p {
-  color: snow !important;
 }
 /*Ícones de rede social*/
 .contrast ul.social-buttons li a {

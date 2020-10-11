@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- B2: Script para menu -->
+<script>
+  var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+    
+    
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+</script>
+
+<!-- Inicio da estrutura do site -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="InfoBioJr">
+
+    <!-- Script para o Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141202748-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141202748-1');
+    </script>
+
+    <!-- Icone da aba do site -->
+    <link rel="shortcut icon" href="img\LogoInfobioJr.png" type="image/png">
+    <link rel="icon" href="img\LogoInfobioJr.png" type="image/png">
+
+    <title>InfoBio Jr.</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles for carrousel --> 
+    <link rel="stylesheet" href="css/carousel-bootstrap.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+      
+    <!--Alto contraste-->
+    <link href="css/contrast.css" rel="stylesheet">
+    
+    <!--Cards - afeta servicos-->
+    <link href="css/cards.css" rel="stylesheet">
+      
+    <!--Hover - afeta quem somos nós-->
+    <link href="css/hover.css" rel="stylesheet">
+      
+    <!--Som - Cria botao do som
+    <link href="css/styleSom.css" rel="stylesheet">
+
+    <!--Bioinfo-->
+    <link href="css/bioeng.css"s rel="stylesheet">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130731311-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-130731311-1');
+  </script>
+
+  </head>
+
+  <!-- Assim que a página for carregada, todas informações de cada membros serão colocados -->
+  <body id="page-top">
+
+<section class="py-4" id="porque">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 padding text-center" style="margin-top: 50px;"> 
+                <h3 class="section-heading text-uppercase"  style="text-align:center"> Agradecemos o contato! </h3>
+
+                    <p align="center">
+                    <a href="https://www.infobiojr.com.br/">
+                      <button class="btn btn-primary btn-xl text-uppercase">  Retornar </button>
+                    </a> 
+            </div>
+            <div class="col-md-9 padding text-center"> 
+            <img class="" src="img/mail.png" width="100%">
+            </div>
+          </div>
+    </div>
+    </section>
+
+  <div vw class="enabled libras">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+    <div class="contraste libras" data-toggle="tooltip" title="Mudar contraste" data-placement="left">
+        <div vw-access-button class="contrasteButton">
+            <img class="access-button" src="img/logos/68011.png" style="width:27%; float:right;" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">
+        </div>
+    </div>
+
+      <div class="text-center">
+        <a href='https://www.freepik.com/vectors/text'>Imagem criada por stories - www.freepik.com</a>
+      </div>
+
+    <!-- Footer -->
+    <footer id="rodape">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy;  2020 InfoBio Júnior. <br>Todos os direitos reservados.</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="https://github.com/projetosinfobio" target="_blank">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/InfoBioJr/" target="_blank">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/infobio-jr-813035177/" target="_blank">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/infobiojr/" target="_blank">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+                <span>Feito com amor pela InfobioJr</span>
+              <!--<li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Alto contraste -->
+    <script src="js/altocontraste.js"></script>
+        
+    <!-- Som 
+    <script src="js/scriptSom.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+        
+    <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+        
+    </body>
+</html>

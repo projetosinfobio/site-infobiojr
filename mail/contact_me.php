@@ -1,53 +1,71 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\OAuth;
+use League\OAuth2\Client\Provider\Google;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/vendor/autoload.php';
 
-// Check for empty fields
-if(empty($_POST['name'])      ||
-   empty($_POST['email'])     ||
-   empty($_POST['assunto'])     ||
-   empty($_POST['message'])   ||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   {
-   echo "No arguments Provided!";
-   return false;
-   }
-   
-$name_from = strip_tags(htmlspecialchars($_POST['name']));
-$email = strip_tags(htmlspecialchars($_POST['email']));
-$assunto = strip_tags(htmlspecialchars($_POST['assunto']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
+    // Check for empty fields
+    if(empty($_POST['name'])      ||
+       empty($_POST['email'])     ||
+       empty($_POST['assunto'])     ||
+       empty($_POST['message'])   ||
+       !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+       {
+       echo 'Ocorreu um erro no envio da mensagem, tente novamente mais tarde';
+       }
 
-$mail = new PHPMailer;
+    $name = strip_tags(htmlspecialchars($_POST['name']));
+    $email = strip_tags(htmlspecialchars($_POST['email']));
+    $assunto = strip_tags(htmlspecialchars($_POST['assunto']));
+    $message = strip_tags(htmlspecialchars($_POST['message']));
 
-$email_da_infobio = 'infobiojunior@gmail.com';
-   
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com;smtp2.example.com';     // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = $email_da_infobio;                  // SMTP username
-$mail->Password = 'InfobioJr@0!8';                    // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
+    $mail = new PHPMailer(TRUE);
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Port = 587;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->SMTPAuth = true;
+    $mail->AuthType = 'XOAUTH2';
+    $mail->CharSet = PHPMailer::CHARSET_UTF8;
 
-$mail->setFrom($email_da_infobio, $name_from);        // O email da infobio vai aqui por conta de restrições do google
-$mail->addAddress($email_da_infobio, 'InfoBioJr');     // Add a recipient
+    $mail->oauthUserEmail = "infobiojunior@gmail.com";
+    $clientId = '45434933034-247c1d7o11if1na1m83vgbest6mvjose.apps.googleusercontent.com';
+    $clientSecret = '5Rl1x-Ie5Wad1mBatZ9j1No5';
+    $refreshToken = '1//0h1RCqKEh9VLQCgYIARAAGBESNwF-L9IrRpSzqSyX0vDZjXkV8tg3pYCpmIFCcjTUuu6KllCmCmWymUx4ZUchdxN-ppgF5RqcaqE';
 
-$mail->isHTML(true);                                  // Set email format to HTML
+    $provider = new Google(
+    [
+        'clientId' => $clientId,
+        'clientSecret' => $clientSecret,
+    ]
+    );
 
-$mail->Subject = $assunto; 
-$mail->Body    = 'Email do cliente: '. $email . "<br>Nome do cliente: ". $name_from . "<br>" . "<br> Conteúdo: <br>" .  $message; //Deve colocar o email do cliente aqui por restrições do Google
+    $mail->setOAuth(
+    new OAuth(
+        [
+            'provider' => $provider,
+            'clientId' => $clientId,
+            'clientSecret' => $clientSecret,
+            'refreshToken' => $refreshToken,
+            'userName' => 'infobiojunior@gmail.com',
+        ]
+    )
+    );
 
-if(!$mail->send()) {
-    echo "Email não pode ser enviado, por favor contacte o administrador da página.";
-    echo "<br> Mailer Error: " . $mail->ErrorInfo;
+    $email_da_infobio = 'infobiojunior@gmail.com';
+
+    $mail->setFrom($email_da_infobio, $name);
+    $mail->addAddress($email_da_infobio, 'infobioJr');
+    $mail->Subject = $assunto;
+    $mail->Body = 'Email do cliente: '. $email . "\nNome do cliente: ". $name . "\n" . "\n Conteúdo: \n" .  $message;
+
+
+if (!$mail->send()) {
+    echo 'Mailer Error: '. $mail->ErrorInfo;
 } else {
-    header("Location: /site-infobiojr/index.html");
+    header('location: http://localhost/site-infobiojr/mail.html');
 }
-?>

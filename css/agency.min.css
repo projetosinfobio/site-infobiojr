@@ -3,6 +3,16 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
+
+@keyframes appear{
+  0% {
+    opacity: 10%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 .contraste{
     position: fixed;
     max-width: 95vw;
@@ -24,6 +34,21 @@
     cursor: pointer;
     margin: 0px 0px 0px -100px;
     max-width: none;
+    float: right;
+}
+
+.som{
+    position: fixed;
+    max-width: 95vw;
+    right: 0;
+    top: 60%;
+    margin-top: -44header-bg1vh;
+    z-index: 99999999;
+    display: none;
+    font-family: Arial;
+    color: #000;
+    line-height: 1.3;
+    display: block;
     float: right;
 }
 
@@ -54,6 +79,7 @@
 }
 
 body {
+    animation: 1s ease-out 0s 1 appear;
     /*fonte dos textos*/
     overflow-x: hidden;
     font-family: Bahnschrift Light, Aaux ProMedium OSF, 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif
@@ -246,7 +272,7 @@ header.masthead {
     /*cor da segunda frase*/
     color: #fff;
     /*imagem background*/
-    background-image: url(../img/header-bg1.jpg);
+    background-image: url(../img/teste.png);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
