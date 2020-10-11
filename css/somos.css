@@ -1,0 +1,139 @@
+
+#mainNav {
+    background-color: #212529
+}
+
+#mainNav .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 0;
+    background-color: #35507F;
+    font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+#mainNav .navbar-brand {
+    /*cor de InfoBioJr */
+    color: #fff;
+    /*Fonte InfoBio Junior*/
+    font-family: DejaVu Sans Bold, Century Gothic, Microsoft JhengHei Light, 'Helvetica Neue', Helvetica, Arial, cursive
+}
+
+#mainNav .navbar-brand.active,
+#mainNav .navbar-brand:active,
+#mainNav .navbar-brand:focus,
+#mainNav .navbar-brand:hover {
+    /*cor de seleção de InfoBiorJr*/
+    color: #78FFAC
+}
+/*cor das palavras da barra de navegação*/
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 90%;
+    font-weight: 400;
+    padding: .75em 0;
+    letter-spacing: 1px;
+    color: #fff;
+    /* fonte da barra de navegação*/
+    font-family: Yu Gothic, Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+    /* cor das palavras da barra de nav quando selecionadas*/
+    color: #78FFAC
+}
+
+@media (min-width:992px) {
+    #mainNav {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        -webkit-transition: padding-top .3s, padding-bottom .3s;
+        -moz-transition: padding-top .3s, padding-bottom .3s;
+        transition: padding-top .3s, padding-bottom .3s;
+        border: none;
+        background-color: transparent
+    }
+    #mainNav .navbar-brand {
+    	/* tamanho da fonte do menu */
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .45s
+    }
+    #mainNav .navbar-nav .nav-item .nav-link {
+        padding: 1.1em 1em!important
+    }
+    /* cor da barra de nav*/
+    #mainNav.navbar-shrink {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: #35507F
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+        font-size: 1.25em;
+        padding: 12px 0
+    }
+}
+
+header.somos {
+    text-align: center;
+    /*cor da segunda frase*/
+    color: #fff;
+    /*imagem background*/
+    background-image: url(../img/team/equipe%20-%20Copia.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+
+header.somos .intro-text {
+    padding-top: 150px;
+    padding-bottom: 100px
+}
+
+header.somos .intro-text .intro-lead-in {
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+    margin-bottom: 25px;
+    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+header.somos .intro-text .intro-heading {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 25px;
+    font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+@media (min-width:768px) {
+    header.somos .intro-text {
+        padding-top: 300px;
+        padding-bottom: 200px
+    }
+    /*muda fonte da primeira frase e seu tamanho*/
+    header.somos .intro-text .intro-lead-in {
+        font-size: 50px;
+        font-style: italic;
+        color: #78FFAC;
+        line-height: 40px;
+        margin-bottom: 25px;
+        text-shadow: 1.5px 1.5px rgb(20, 31, 49);
+        font-family: Kanit Thin, Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    header.somos .intro-text .intro-heading {
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+        margin-bottom: 50px;
+        font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif
+    }
+}
